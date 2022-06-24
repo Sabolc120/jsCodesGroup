@@ -1,0 +1,2 @@
+# jsCodesGroup
+JavaScript kódok gyűjteménye
