@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stilus.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Szerkesztés</title>
+  </head>
+  <body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm bg-light">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Nyitó</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/upload">Feltöltés</a>
+            </li>
+          </ul>
+        </nav>
+        <form action="/frissit" method="post" enctype="multipart/form-data">
+            <label for="id">Id: </label>
+            <input type ="text" name="id" id="id" value="<%= data._id%>"/>
+            <br>
+            <label for="nev">Terméknév: </label>
+            <input type ="text" name="nev" id="nev" value="<%= data.nev%>"/>
+            <br>
+            <label for="termektipus">Terméktipus: </label>
+            <input type ="text" name="termektipus" id="termektipus" value="<%= data.termektipus%>"/>
+            <br>
+            <label for="ar">Termék ár: </label>
+            <input type ="text" name="ar" id="ar" value="<%= data.ar%>"/>
+            <br>
+            <label for="kep">Termék kép: </label>
+            <input type="file" name="kep" id="kep"/>
+            <br>
+            <input type="submit" value="Szerkesztés">
+        </form>
+  </body>
+</html>
